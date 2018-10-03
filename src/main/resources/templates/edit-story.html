@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edition</title>
+</head>
+<body>
+    <div class="form">
+        <form action="#" th:action="@{/edit-story(name=${storyEdit.name})}"  method="post">
+            <div class="name">
+                <label th:text="|Nom de l'histoire:  ${storyEdit.name}|"> </label>
+            </div>
+            <div class="summary">
+                <label>Résumé: </label>
+                <input type="text" th:field="*{storyEdit.summary}" >
+            </div>
+            <div class="submit">
+                <button type="submit"> Enregistrer </button>
+            </div>
+        </form>
+    </div>
+    <div class="delete">
+        <button><a th:href="@{delete-story(name=${storyEdit.name})}">Supprimer l'histoire</a></button>
+    </div>
+    <div >
+        <h1 text-align="center">Menu d'edit</h1>
+
+        <ul th:each="pageEdit : ${pageEdit}" >
+            <li ><a th:href="@{edit-page(name=${storyEdit.name},knot=${pageEdit.knot})}" th:text="|${pageEdit.knot}  ${pageEdit.title}|"></a></li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h1>Dashboard</h1>
+
+        <div class="stories">
+            <ul th:each="story : ${story}" >
+                <li ><a th:href="@{edit-story(name=${story.name})}" th:text="${story.name}"></a></li>
+                <p th:text="${story.summary}"></p>
+            </ul>
+        </div>
+        <div class="accueil">
+            <button><a th:href="@{accueil}">Accueil</a></button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Nouveau chapitre</h1>
+    <form action="#" th:action="@{/new-page(name=${storyName},knot=${pageKnot})}"  method="post">
+        <label>Titre du chapitre:</label>
+        <textarea th:field="*{newPage.title}"></textarea>
+        <label>Contenu du chapitre:</label>
+        <textarea th:field="*{newPage.text}"></textarea>
+        <button>Enregistrer</button>
+    </form>
+</body>
+</html>
