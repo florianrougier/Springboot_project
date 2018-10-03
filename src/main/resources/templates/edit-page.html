@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h1>Edition des pages</h1>
+    <h3 th:text="${pageEdit.title}"></h3>
+    <form action="#" th:action="@{/edit-page(name=${storyName},knot=${pageEdit.knot})}"  method="post">
+        <textarea th:field="${pageEdit.text}"></textarea>
+        <a th:if="${pageEdit.knot} != '1'" th:href="@{delete-page(name=${storyName},knot=${pageEdit.knot})}"><input type="button" value="Supprimer la page"></a>
+        <a th:href="@{new-page(name=${storyName},knot=${pageEdit.knot})}"><input type="button" value="Ajouter un chapitre"></a>
+        <button type="submit">Enregistrer les modifications</button>
+    </form>
+</body>
+</html>

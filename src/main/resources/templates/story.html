@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Story2</title>
+</head>
+<body>
+    <h1 th:text="${story.name}"></h1>
+    <h3 th:text="${story.summary}"></h3>
+    <h5 th:text="${page.title}"></h5>
+    <p th:text="${page.text}"></p>
+
+    <ul th:each="nextPage : ${nextPage}" >
+        <li ><button><a th:href="@{story(name=${story.name},knot=${nextPage.knot})}" th:text="${nextPage.title}"></a></button></li>
+    </ul>
+
+
+
+</body>
+</html>
