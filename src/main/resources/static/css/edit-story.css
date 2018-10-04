@@ -1,8 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 body{
-    background-color: #607d8b;
-    color: white;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    background: #607d8b;
 }
-h1{
+
+h1, h2 {
     color: white;
     text-align: center;
 }
@@ -56,6 +62,6 @@ a:hover {
     font-size: 20px;
     margin-top: 40px;
     width: 600px;
-    min-height: 300px;
+    min-height: 200px;
     color: #000000;
 }

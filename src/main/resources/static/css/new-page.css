@@ -1,130 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 body{
-	background-color: #607d8b;
-	color: white;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    background: #607d8b;
 }
 
-a{
-	color: white;
+h1, h2 {
+    margin: 0 auto;
+    color: white;
 }
-a:hover{
-	color: blue;
-	text-decoration: none;
+
+h2 {
+    font-size: 15px;
+}
+
+.content-row {
+    margin-top: 50px;
+}
+
+.options {
+    text-align: center;
+    margin-top: 50px;
 }
 .banner{
-	background-image: url('../img/banner.jpg');
-	min-height: 250px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
+    background-image: url('../img/banner.jpg');
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 
 }
 .container-buttons{
-	position: absolute;
-	right:    0;
-	bottom:   0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
-.bloc-principal{
-	margin-top: 40px;
+.custom-container {
+    text-align: center;
 }
 
-.options{
-	text-align: center;
-	margin-top: 40px;
+.list-chapter {
+    float: left;
+    margin-top: 40px;
 }
 
-.btn-menu-selection{
-	min-height: 50px;
-	width: 250px; 
+#title-chapter {
+    color: white;
+    margin-top: 10px;
 }
 
-.list{
-	border: 2px solid white;
+#pageTitle {
+    width: 600px;
+    margin: 10px auto;
 }
 
-#btn-right{
-	margin-left: 15px;
+#chapterContent {
+    margin: 10px auto;
+    font-size: 20px;
+    width: 600px;
+    min-height: 200px;
+    color: #000000;
 }
 
-#btn-left{
-	margin-right: 15px;
+#storyTitle {
+    margin-top: 20px;
 }
 
-.hovereffect {
-  width: 100%;
-  height: 100%;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-}
-
-.hovereffect .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  background-color: rgba(75,75,75,0.7);
-  -webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
-  transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
-}
-
-.hovereffect:hover .overlay {
-  background-color: rgba(48, 152, 157, 0.4);
-}
-
-.hovereffect img {
-  display: block;
-  position: relative;
-}
-
-.hovereffect h2 {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateY(45px);
-  -ms-transform: translateY(45px);
-  transform: translateY(45px);
-  -webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
-  transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
-}
-
-.hovereffect:hover h2 {
-  -webkit-transform: translateY(5px);
-  -ms-transform: translateY(5px);
-  transform: translateY(5px);
-}
-
-.hovereffect a.info {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: transparent;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
-  transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
-  font-weight: normal;
-  margin: -52px 0 0 0;
-  padding: 130px 100px;
-}
-
-.hovereffect:hover a.info {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+#chapterTitle {
+    margin-top: 15px;
 }

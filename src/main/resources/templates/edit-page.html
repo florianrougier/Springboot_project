@@ -2,16 +2,41 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Edition d'une page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/edit-page.css}">
+    <link rel="icon" th:href="@{/img/icon.jpg}"/>
 </head>
 <body>
-        <h1>Edition des pages</h1>
-    <h3 th:text="${pageEdit.title}"></h3>
-    <form action="#" th:action="@{/edit-page(name=${storyName},knot=${pageEdit.knot})}"  method="post">
-        <textarea th:field="${pageEdit.text}"></textarea>
-        <a th:if="${pageEdit.knot} != '1'" th:href="@{delete-page(name=${storyName},knot=${pageEdit.knot})}"><input type="button" value="Supprimer la page"></a>
-        <a th:href="@{new-page(name=${storyName},knot=${pageEdit.knot})}"><input type="button" value="Ajouter un chapitre"></a>
-        <button type="submit">Enregistrer les modifications</button>
-    </form>
+<div class="banner col-md-12">
+    <div class="container-buttons">
+        <a href="inscription" class="btn btn-primary btn-top">Se connecter</a>
+        <a href="inscription" class="btn btn-primary btn-top">S'inscrire</a>
+    </div>
+</div>
+
+
+<div class="row col-md-12">
+    <h1 id="storyTitle" th:text="${storyName}"></h1>
+</div>
+<div class="row col-md-12">
+    <h2 id="chapterTitle" th:text="${pageEdit.title}"></h2>
+</div>
+<form action="#" th:action="@{/edit-page(name=${storyName},knot=${pageEdit.knot})}" method="post">
+    <div class="row col-md-12">
+        <textarea type="text" id="Synopsis" th:field="${pageEdit.text}"></textarea>
+    </div>
+    <div class="row">
+        <div class="options col-md-12">
+            <a th:href="@{accueil}" class="btn btn-primary btn-top btn-lg">Retourner à l'accueil</a>
+            <button type="submit" class="btn btn-primary btn-top btn-lg">Enregistrer les modifications</button>
+            <a th:href="@{new-page(name=${storyName},knot=${pageEdit.knot})}" class="btn btn-primary btn-top btn-lg">Ajouter
+                un chapitre</a>
+            <a th:if="${pageEdit.knot} != '1'" th:href="@{delete-page(name=${storyName},knot=${pageEdit.knot})}"
+               class="btn btn-primary btn-top btn-lg">Supprimer la page</a>
+        </div>
+    </div>
+</form>
 </body>
 </html>

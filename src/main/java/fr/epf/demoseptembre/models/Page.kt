@@ -1,6 +1,9 @@
 package fr.epf.demoseptembre.models
 
-import javax.persistence.*
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+import javax.persistence.ManyToOne
 
 /**
  * Cette classe utilise Kotlin (parce qu'on est grave des Hipsters).
@@ -10,7 +13,5 @@ import javax.persistence.*
  */
 @Entity
 data class Page(@Id @GeneratedValue var page_id: Int? =  null, var title: String?=null, @ManyToOne var story: Story?= null,
-                var knot: String?= null, var text: String?= null) {
-
-}
+                var knot: String? = null, var text: String? = null)
 

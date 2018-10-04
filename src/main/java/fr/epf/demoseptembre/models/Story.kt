@@ -12,6 +12,5 @@ import javax.persistence.ManyToOne
  * @author Loïc Ortola on 10/09/2018
  */
 @Entity
-data class Story(@Id @GeneratedValue var story_id: Int? =  null, var name: String? = null, var summary: String? = null, @ManyToOne var user: User?= null) {
-}
+data class Story(@Id @GeneratedValue var story_id: Int? = null, var name: String? = null, var summary: String? = null, @ManyToOne var user: User? = null)
 

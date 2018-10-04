@@ -11,5 +11,4 @@ import javax.persistence.Id
  * @author Loïc Ortola on 10/09/2018
  */
 @Entity
-data class User(@Id @GeneratedValue var user_id: Int? =  null, var login: String? = null, var password: String?= null ) {
-}
+data class User(@Id @GeneratedValue var user_id: Int? = null, var login: String? = null, var password: String? = null)

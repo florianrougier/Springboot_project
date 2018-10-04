@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Edition</title>
+    <title>Edition d'une histoire</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/edit-story.css}">
@@ -27,7 +27,7 @@
             </div>
             <div class="row content-row">
                 <div class="col-md-6">
-                    <h2>Edition du résumé:</h2>
+                    <h2>Edition du chapitre:</h2>
                     <textarea type="text" id="Synopsis" th:field="*{storyEdit.summary}"> </textarea>
                 </div>
                 <!--Here we display all the story pages  -->

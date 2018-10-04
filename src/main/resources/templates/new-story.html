@@ -2,33 +2,46 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>New Story</title>
+    <title>Nouvelle histoire</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/new-story.css}">
+    <link rel="icon" th:href="@{/img/icon.jpg}"/>
 </head>
 <body>
-    <h1>New Story</h1>
-    <div class="form">
-        <form action="#" th:action="@{/new-story}"  method="post">
-            <div class="name">
-                <label>Nom de l'histoire: </label>
-                <input type="text" th:field="*{story.name}">
-            </div>
-            <div class="summary">
-                <label>Résumé: </label>
-                <input type="text" th:field="*{story.summary}">
-            </div>
-            <div class="titleChapter">
-                <label>Titre du 1er chapitre: </label>
-                <input type="text" th:field="*{page.title}">
-            </div>
-            <div class="firstChapter">
-                <label>Premier chapitre: </label>
-                <input type="text" th:field="*{page.text}">
-            </div>
-            <div class="valider">
-                <button type="submit"> Enregistrer </button>
-            </div>
-        </form>
+<div class="banner col-md-12">
+    <div class="container-buttons">
+        <a href="inscription" class="btn btn-primary btn-top">Se connecter</a>
+        <a href="inscription" class="btn btn-primary btn-top">S'inscrire</a>
     </div>
+</div>
+
+<div class="container">
+    <form id="contact" th:action="@{/new-story}" method="post">
+        <h3>Nouvelle histoire</h3>
+        <h4>Remplis vite les champs ci-dessous pour créer ton histoire</h4>
+        <fieldset>
+            <input placeholder="Nom de l'histoire" th:field="*{story.name}" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="Résumé" th:field="*{story.summary}" type="email" tabindex="2" required></textarea>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Titre du premier chapitre" th:field="*{page.title}" type="tel" tabindex="3" required>
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="Contenu du premier chapitre" th:field="*{page.text}" tabindex="4"
+                      required></textarea>
+        </fieldset>
+        <fieldset>
+            <button type="submit" id="contact-submit">Créer l'histoire</button>
+        </fieldset>
+        <fieldset>
+            <p id="back-home"><a th:href="@{accueil}">Retourner à l'accueil</a></p>
+        </fieldset>
+    </form>
+</div>
+
 
 </body>
 </html>
