@@ -1,20 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Les histoires dont vous etes le heros</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+    <link rel="icon" th:href="@{/img/icon.jpg}"/>
 </head>
 <body>
-        <h1>Dashboard</h1>
+<div class="banner col-md-12">
+    <div class="container-buttons">
+        <a href="inscription" class="btn btn-primary btn-top">Se connecter</a>
+        <a href="inscription" class="btn btn-primary btn-top">S'inscrire</a>
+    </div>
+</div>
 
-        <div class="stories">
-            <ul th:each="story : ${story}" >
-                <li ><a th:href="@{edit-story(name=${story.name})}" th:text="${story.name}"></a></li>
-                <p th:text="${story.summary}"></p>
+<div class="options col-md-12">
+    <a th:href="@{accueil}" class="btn btn-primary btn-top btn-lg options-left">Retourner à l'accueil</a>
+    <a th:href="@{new-story}" class="btn btn-primary btn-top btn-lg options-right">Créer une nouvelle histoire</a>
+</div>
+
+<div class="container bloc-principal">
+    <div class="row">
+        <div class="col-md-3 list">
+            Liste d'histoires
+            <ul th:each="story : ${story}">
+                <li><a th:href="@{edit-story(name=${story.name})}" th:text="${story.name}"></a></li>
             </ul>
         </div>
-        <div class="accueil">
-            <button><a th:href="@{accueil}">Accueil</a></button>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" th:each="story : ${story}">
+            <div class="hovereffect">
+                <img class="img-responsive" th:src="@{/img/seigneur_des_moineaux.jpg}" alt="">
+                <div class="overlay">
+                    <h2 th:text="${story.name}"></h2>
+                    <a class="info" th:href="@{edit-story(name=${story.name})}" >Editer l'histoire</a>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 </html>

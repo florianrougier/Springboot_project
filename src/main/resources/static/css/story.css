@@ -1,0 +1,36 @@
+body{
+	background-color: #607d8b;
+}
+.banner{
+	background-image: url('../img/banner.jpg');
+	min-height: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+
+}
+.container-buttons{
+	position: absolute;
+	right:    0;
+	bottom:   0;
+}
+
+.container{
+	text-align: center;
+}
+
+.choices{
+	margin-right: 30px;
+	margin-top: 20px;
+}
+#title-chapter{
+	color: white;
+	margin-top: 10px;
+}
+#myPArea{
+	margin: 0 auto;
+	font-size: 20px;
+	margin-top: 40px;
+	width: 600px;
+	color: white;
+}

@@ -1,0 +1,61 @@
+body{
+    background-color: #607d8b;
+    color: white;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+}
+a:hover {
+    text-decoration: none;
+    color: #38b62c;
+}
+.content-row {
+    margin-top: 50px;
+}
+
+.options {
+    text-align: center;
+    margin-top: 50px;
+}
+.banner{
+    background-image: url('../img/banner.jpg');
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+.container-buttons{
+    position: absolute;
+    right:    0;
+    bottom:   0;
+}
+
+.custom-container{
+    text-align: center;
+}
+
+.list-chapter {
+    float: left;
+    margin-top: 40px;
+}
+
+#title-chapter{
+    color: white;
+    margin-top: 10px;
+}
+#Synopsis{
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 40px;
+    width: 600px;
+    min-height: 300px;
+    color: #000000;
+}
