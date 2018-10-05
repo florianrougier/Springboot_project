@@ -7,7 +7,7 @@
 <body>
     <h1>New Story</h1>
     <div class="form">
-        <form action="#" th:action="@{/new-story}"  method="post">
+        <form action="#" th:action="@{/new-story}" th:object="${formObject}" method="post">
             <div class="name">
                 <label>Nom de l'histoire: </label>
                 <input type="text" th:field="*{story.name}">
@@ -23,6 +23,13 @@
             <div class="firstChapter">
                 <label>Premier chapitre: </label>
                 <input type="text" th:field="*{page.text}">
+            </div>
+            <div>
+                <ul>
+                    <li th:each="i:${img}">
+                        <label><input type="radio" th:field="*{story.img}" th:value="${i}" /><img th:src="${i}"></label><br>
+                    </li>
+                </ul>
             </div>
             <div class="valider">
                 <button type="submit"> Enregistrer </button>

@@ -48,8 +48,8 @@ public class DemoSeptembreApplication {
 
 
     storyDao.deleteAll();
-    storyDao.save(new Story(null, "John Wars","La vie de John allait bien jusqu'a que son chimpanzé domestique se fasse tué par un gang de mafieux. Il décide alors de se venger !!!",userDao.findByLogin("tibo").get(0)));
-    storyDao.save(new Story(null, "Le seigneur des moineaux","Gollum la mouette se retrouve un jour foudroyé par l'amour, en rencontrant un moineau nommé 'Gisèle'. Arriverez vous à la convaincre de votre amour passionné ???",userDao.findByLogin("alex").get(0)));
+    storyDao.save(new Story(null, "John Wars","La vie de John allait bien jusqu'a que son chimpanzé domestique se fasse tué par un gang de mafieux. Il décide alors de se venger !!!",userDao.findByLogin("tibo").get(0),".../static/img/seigneur_des_moineaux"));
+    storyDao.save(new Story(null, "Le seigneur des moineaux","Gollum la mouette se retrouve un jour foudroyé par l'amour, en rencontrant un moineau nommé 'Gisèle'. Arriverez vous à la convaincre de votre amour passionné ???",userDao.findByLogin("alex").get(0),".../static/img/seigneur_des_moineaux"));
 
     pageDao.deleteAll();
     pageDao.save(new Page(null, "Un synopsis", storyDao.findById(3).get(),"1","Une petite histoire de Wars"));
