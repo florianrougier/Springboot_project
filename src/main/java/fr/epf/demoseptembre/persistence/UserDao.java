@@ -18,6 +18,7 @@ import java.util.List;
 public interface UserDao extends CrudRepository<User, Integer> {
 
     List<User> findByLogin(String pseudo);
+
     List<User> findByPassword(String password);
     List<User> findByLoginAndPassword(String login, String password);
 }
