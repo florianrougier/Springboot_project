@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
     <title>Lecture</title>
     <meta charset="utf-8">
@@ -34,7 +34,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12" th:each="nextPage : ${nextPage}">
-            <a  class="btn btn-primary choices" th:href="@{story(name=${story.name},knot=${nextPage.knot})}" th:text="${nextPage.title}"></a>
+            <a class="btn btn-primary choices" th:href="@{story(name=${story.name},knot=${nextPage.knot})}"
+               th:text="${nextPage.title}"></a>
         </div>
     </div>
 </div>

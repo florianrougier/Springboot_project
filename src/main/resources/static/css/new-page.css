@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-body{
+
+body {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
@@ -25,7 +26,8 @@ h2 {
     text-align: center;
     margin-top: 50px;
 }
-.banner{
+
+.banner {
     background-image: url('../img/banner.jpg');
     min-height: 250px;
     background-repeat: no-repeat;
@@ -33,7 +35,8 @@ h2 {
     width: 100%;
 
 }
-.container-buttons{
+
+.container-buttons {
     position: absolute;
     right: 0;
     bottom: 0;

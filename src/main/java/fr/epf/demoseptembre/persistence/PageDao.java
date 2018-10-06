@@ -11,6 +11,8 @@ import java.util.List;
 public interface PageDao extends CrudRepository<Page, Integer> {
 
     List<Page> findByKnot(String knot);
+
     List<Page> findByStory(Story story);
+
     List<Page> findByStoryAndKnot(Story story, String knot);
 }

@@ -17,7 +17,7 @@
 </div>
 
 <div class="container">
-    <form id="contact" th:action="@{/new-story}" method="post">
+    <form id="contact" th:action="@{/new-story}" th:object="${formObject}" method="post">
         <h3>Nouvelle histoire</h3>
         <h4>Remplis vite les champs ci-dessous pour créer ton histoire</h4>
         <fieldset>
@@ -32,6 +32,12 @@
         <fieldset>
             <textarea placeholder="Contenu du premier chapitre" th:field="*{page.text}" tabindex="4"
                       required></textarea>
+        </fieldset>
+        <fieldset>
+            <label class="col-md-4" th:each="i : ${img}" required>
+                <input type="radio" th:field="*{story.img}" th:value="${i}"/>
+                <img th:src="${i}">
+            </label>
         </fieldset>
         <fieldset>
             <button type="submit" id="contact-submit">Créer l'histoire</button>

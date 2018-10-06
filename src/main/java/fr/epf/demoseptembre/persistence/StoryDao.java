@@ -11,6 +11,7 @@ import java.util.List;
 public interface StoryDao extends CrudRepository<Story, Integer> {
 
     List<Story> findByName(String name);
+
     List<Story> findByUser(User user);
 
 }

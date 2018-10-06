@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-body{
+
+body {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
@@ -12,16 +13,20 @@ h1, h2 {
     color: white;
     text-align: center;
 }
+
 ul {
     list-style-type: none;
 }
+
 a {
     color: white;
 }
+
 a:hover {
     text-decoration: none;
     color: #38b62c;
 }
+
 .content-row {
     margin-top: 50px;
 }
@@ -30,7 +35,8 @@ a:hover {
     text-align: center;
     margin-top: 50px;
 }
-.banner{
+
+.banner {
     background-image: url('../img/banner.jpg');
     min-height: 250px;
     background-repeat: no-repeat;
@@ -38,13 +44,14 @@ a:hover {
     width: 100%;
 
 }
-.container-buttons{
+
+.container-buttons {
     position: absolute;
-    right:    0;
-    bottom:   0;
+    right: 0;
+    bottom: 0;
 }
 
-.custom-container{
+.custom-container {
     text-align: center;
 }
 
@@ -53,11 +60,12 @@ a:hover {
     margin-top: 40px;
 }
 
-#title-chapter{
+#title-chapter {
     color: white;
     margin-top: 10px;
 }
-#Synopsis{
+
+#Synopsis {
     margin: 0 auto;
     font-size: 20px;
     margin-top: 40px;

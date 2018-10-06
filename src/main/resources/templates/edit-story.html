@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Edition d'une histoire</title>
@@ -34,11 +34,11 @@
                 <div class="tree-view col-md-6">
                     <h2>Edition par chapitre (cliquer pour éditer):</h2>
                     <div class="list-chapter">
-                    <ul th:each="pageEdit : ${pageEdit}">
-                        <li><a th:href="@{edit-page(name=${storyEdit.name},knot=${pageEdit.knot})}"
-                               th:text="|${pageEdit.knot}  ${pageEdit.title}|"></a></li>
-                    </ul>
-                </div>
+                        <ul th:each="pageEdit : ${pageEdit}">
+                            <li><a th:href="@{edit-page(name=${storyEdit.name},knot=${pageEdit.knot})}"
+                                   th:text="|${pageEdit.knot}  ${pageEdit.title}|"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="row">

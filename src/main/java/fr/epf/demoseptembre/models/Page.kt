@@ -12,6 +12,6 @@ import javax.persistence.ManyToOne
  * @author Loïc Ortola on 10/09/2018
  */
 @Entity
-data class Page(@Id @GeneratedValue var page_id: Int? =  null, var title: String?=null, @ManyToOne var story: Story?= null,
+data class Page(@Id @GeneratedValue var page_id: Int? = null, var title: String? = null, @ManyToOne var story: Story? = null,
                 var knot: String? = null, var text: String? = null)
 

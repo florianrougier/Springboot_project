@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
     <title>Les histoires dont vous etes le heros</title>
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
 </div>
 
 <div class="container bloc-principal">
-    <div class="row">
+    <div class="row row-resize">
         <div class="col-md-3 list">
             Liste d'histoires
             <ul th:each="story : ${story}">
@@ -31,10 +31,10 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" th:each="story : ${story}">
             <div class="hovereffect">
-                <img class="img-responsive" th:src="@{/img/seigneur_des_moineaux.jpg}" alt="">
+                <img class="img-responsive" th:src="${story.img}" alt="Story's image">
                 <div class="overlay">
                     <h2 th:text="${story.name}"></h2>
-                    <a class="info" th:href="@{edit-story(name=${story.name})}" >Editer l'histoire</a>
+                    <a class="info" th:href="@{edit-story(name=${story.name})}">Editer l'histoire</a>
                 </div>
             </div>
         </div>

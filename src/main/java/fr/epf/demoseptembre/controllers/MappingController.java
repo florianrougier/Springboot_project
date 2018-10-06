@@ -1,14 +1,16 @@
 package fr.epf.demoseptembre.controllers;
 
+import fr.epf.demoseptembre.models.FormObject;
 import fr.epf.demoseptembre.models.Page;
 import fr.epf.demoseptembre.models.Story;
-import fr.epf.demoseptembre.models.User;
 import fr.epf.demoseptembre.persistence.PageDao;
 import fr.epf.demoseptembre.persistence.StoryDao;
 import fr.epf.demoseptembre.persistence.UserDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -53,26 +55,32 @@ public class MappingController {
     }
 
     @GetMapping("/new-story")
-    public String getNewStory(Story story, Page page, Model model) {
+    public String getNewStory(Model model) {
+
+        String[] img = {"/img/seigneur_des_moineaux.jpg", "/img/knight.jpg", "/img/seigneur_des_moineaux.jpg"};
+        model.addAttribute("formObject", new FormObject());
+        model.addAttribute("img", img);
+
         return "new-story";
+    }
+
+    @PostMapping("/new-story")
+    public String postNewStory(FormObject formObject, Model model) {
+
+        formObject.getStory().setUser(userDao.findByLogin("alex").get(0));
+        formObject.getStory().setImg(formObject.getStory().getImg());
+        storyDao.save(formObject.getStory());
+
+        formObject.getPage().setStory(formObject.getStory());
+        formObject.getPage().setKnot("1");
+        pageDao.save(formObject.getPage());
+
+        return "redirect:accueil";
     }
 
     @GetMapping("/inscription")
     public String getInscription() {
         return "inscription";
-    }
-
-    @PostMapping("/new-story")
-    public String postNewStory(Story story2, Page page, Model model) {
-
-        story2.setUser(userDao.findByLogin("alex").get(0));
-        storyDao.save(story2);
-
-        page.setStory(story2);
-        page.setKnot("1");
-        pageDao.save(page);
-
-        return "redirect:accueil";
     }
 
     @GetMapping("/story")

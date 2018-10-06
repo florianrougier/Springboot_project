@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Edition d'une page</title>
@@ -20,10 +20,10 @@
 <div class="row col-md-12">
     <h1 id="storyTitle" th:text="${storyName}"></h1>
 </div>
-<div class="row col-md-12">
-    <h2 id="chapterTitle" th:text="${pageEdit.title}"></h2>
-</div>
 <form action="#" th:action="@{/edit-page(name=${storyName},knot=${pageEdit.knot})}" method="post">
+    <div class="row col-md-12">
+        <input type="text" id="chapterTitle" th:text="${pageEdit.title}">
+    </div>
     <div class="row col-md-12">
         <textarea type="text" id="Synopsis" th:field="${pageEdit.text}"></textarea>
     </div>
