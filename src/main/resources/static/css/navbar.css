@@ -1,0 +1,165 @@
+/*Navbar CSS*/
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background: black;
+}
+
+.header-left,
+.header-right {
+    position: relative;
+    color: white;
+    float: left;
+}
+
+.header-left {
+    width: 30%;
+}
+
+.header-right label {
+    position: absolute;
+    top: -3.7em;
+    right: 0;
+    cursor: pointer;
+}
+
+.header-right span {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    background: rgba(255, 255, 255, .3);
+    -webkit-transition: all .3s ease;
+}
+
+.header-right span:hover {
+    background: rgba(255, 255, 255, .6);
+}
+
+.header-right span:before,
+.header-right span:after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: .5em;
+    top: 4px;
+    left: 0;
+    background: black;
+}
+
+.header-right span:after {
+    top: 14px;
+}
+
+.header-right {
+    width: 70%;
+    text-align: right;
+}
+
+#open {
+    display: none;
+}
+
+.header-left > h1 {
+    font-weight: 200;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 40px;
+    padding: 0 2em;
+    -webkit-transition: all .3s ease;
+}
+
+nav > a:hover {
+    background: rgba(255, 255, 255, .9);
+    color: black;
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+
+    nav > a {
+        padding: 0 2em;
+    }
+
+    .header-left > h1 {
+        padding: .5em 0;
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    body {
+        padding: 0 .5em;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    nav {
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: all .3s ease;
+    }
+
+    input[type="checkbox"]:checked + nav {
+        height: 205px;
+    }
+
+    nav > a {
+        padding: 0 1em;
+        display: block;
+        border-bottom: solid 1px rgba(255, 255, 255, .1);
+    }
+
+    h1 {
+        padding: .5em 0;
+        font-size: 14px;
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hidden-desktop {
+        display: block;
+    }
+}

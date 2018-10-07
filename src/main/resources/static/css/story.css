@@ -1,5 +1,5 @@
 body {
-    background-color: #607d8b;
+    background-color: #690006;
 }
 
 .banner {
@@ -24,6 +24,7 @@ body {
 .choices {
     margin-right: 30px;
     margin-top: 20px;
+    min-width: 300px;
 }
 
 #title-chapter {

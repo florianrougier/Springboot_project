@@ -275,7 +275,7 @@ iframe {
     width: 100%;
     font-family: Poppins-Bold;
     font-size: 39px;
-    color: #333333;
+    color: #999999;
     line-height: 1.2;
     text-align: left;
 }
@@ -556,4 +556,9 @@ iframe {
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+/*Custom classes*/
+#back-home {
+    margin: 20px auto;
 }

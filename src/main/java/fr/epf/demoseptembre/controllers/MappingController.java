@@ -57,7 +57,10 @@ public class MappingController {
     @GetMapping("/new-story")
     public String getNewStory(Model model) {
 
-        String[] img = {"/img/seigneur_des_moineaux.jpg", "/img/knight.jpg", "/img/seigneur_des_moineaux.jpg"};
+        String[] img = {"/img/seigneur_des_moineaux.jpg", "/img/knight.jpg", "/img/castlevani.jpg",
+                "/img/dragon.jpg", "/img/Josef-Anton.jpeg", "/img/madoka.jpg",
+                "/img/pirate.jpg", "/img/ship.jpg", "/img/Ziolkowski.jpg"};
+
         model.addAttribute("formObject", new FormObject());
         model.addAttribute("img", img);
 
@@ -128,7 +131,6 @@ public class MappingController {
 
     @PostMapping("/edit-story")
     public String postEditStory(Story storyEdit, Model model, @RequestParam("name") String storyName) {
-
 
         Story story = storyDao.findByName(storyName).get(0);
         story.setSummary(storyEdit.getSummary());
