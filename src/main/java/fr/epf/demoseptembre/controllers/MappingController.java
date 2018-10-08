@@ -193,7 +193,6 @@ public class MappingController {
 
     @PostMapping("/new-page")
     public String postNewPage(Page newPage, Model model, @RequestParam("name") String storyName, @RequestParam("knot") String pageKnot) {
-
         newPage.setKnot(null);
         newPage.setStory(storyDao.findByName(storyName).get(0));
 
