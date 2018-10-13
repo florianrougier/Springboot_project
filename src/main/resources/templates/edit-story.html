@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edition d'une histoire</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/edit-story.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="icon" th:href="@{/img/icon.jpg}"/>
+</head>
+<body>
+<!--Banner-->
+<div class="banner col-md-12"></div>
+
+<!--Navbar-->
+<header class="clearfix">
+    <div class="container">
+        <div class="header-left">
+            <h1>Les histoires dont vous êtes le héros</h1>
+        </div>
+        <div class="header-right">
+            <label for="open">
+                <span class="hidden-desktop"></span>
+            </label>
+            <input type="checkbox" name="" id="open">
+            <nav>
+                <a href="accueil">Accueil</a>
+                <a href="new-story">Nouvelle histoire</a>
+                <a th:if="${user.login} != null" href="dashboard">Tableau de bord</a>
+                <a th:if="${user.login} == null" href="inscription">Inscription</a>
+                <a th:if="${user.login} == null" href="connexion">Connexion</a>
+                <a th:if="${user.login} != null" href="deconnexion" th:text="|Deconnecter ${user.login}|"></a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<div class="container content">
+    <form id="contact" action="#" th:action="@{/edit-story(name=${storyEdit.name})}" method="post">
+        <h3 th:text="${storyEdit.name}"></h3>
+        <h4>Editer le résumé</h4>
+        <fieldset>
+            <textarea type="text" th:field="*{storyEdit.summary}" tabindex="2" required></textarea>
+        </fieldset>
+        <div class="tree-view col-md-12">
+            <h4>Edition par chapitre (cliquer pour éditer):</h4>
+            <ul>
+                <li th:each="pageEdit : ${pageEdit}"><a
+                        th:href="@{edit-page(name=${storyEdit.name},knot=${pageEdit.knot})}"
+                        th:text="|${pageEdit.knot}  ${pageEdit.title}|"></a></li>
+            </ul>
+        </div>
+        <fieldset>
+            <button type="submit">Modifier le résumé</button>
+        </fieldset>
+        <fieldset>
+            <a class="button-form" th:href="@{delete-story(name=${storyEdit.name})}">Supprimer l'histoire</a>
+        </fieldset>
+        <fieldset>
+            <p id="back-home"><a th:href="@{accueil}">Retourner à l'accueil</a></p>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
