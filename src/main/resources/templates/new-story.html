@@ -25,11 +25,11 @@
             </label>
             <input type="checkbox" name="" id="open">
             <nav>
-                <a href="accueil">Accueil</a>
-                <a href="new-story">Nouvelle histoire</a>
+                <a href="home">Accueil</a>
+                <a th:if="${user.login} != null" href="new-story">Nouvelle histoire</a>
                 <a th:if="${user.login} != null" href="dashboard">Tableau de bord</a>
-                <a th:if="${user.login} == null" href="inscription">Inscription</a>
-                <a th:if="${user.login} == null" href="connexion">Connexion</a>
+                <a th:if="${user.login} == null" href="sign-up">Inscription</a>
+                <a th:if="${user.login} == null" href="sign-in">Connexion</a>
                 <a th:if="${user.login} != null" href="deconnexion" th:text="|Deconnecter ${user.login}|"></a>
             </nav>
         </div>
@@ -63,7 +63,7 @@
             <button type="submit" id="contact-submit">Créer l'histoire</button>
         </fieldset>
         <fieldset>
-            <p id="back-home"><a th:href="@{accueil}">Retourner à l'accueil</a></p>
+            <p id="back-home"><a th:href="@{home}">Retourner à l'accueil</a></p>
         </fieldset>
     </form>
 </div>
