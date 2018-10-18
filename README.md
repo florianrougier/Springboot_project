@@ -21,7 +21,7 @@ L' édition:
 
 Moyen d'entrée: L'utilisateur séléctionne  l'option 'Tableau de bord' depuis la barre de navigation. Il peut alors éditer ses histoires. Ce mode nécessite que l'utilisateur soit connecté.
 
-L'édition permet au créateur d'une histoire d'ajouter des chapitres, de les modifier ou de les supprimer. Il peut également décider de supprimer l'histoire. Ces modifications sont sauvegardées dans la base de données. Ce mode permet également,via la création de chapitres, au créateur l'ajout de nouveaux choix.
+L'édition permet au créateur d'une histoire d'ajouter des chapitres, de les modifier ou de les supprimer. Il peut également décider de supprimer l'histoire. Ces modifications sont sauvegardées dans la base de données. Ce mode permet également au créateur,via la création de chapitres,  l'ajout de nouveaux choix.
 
 Ce projet utilise les frameworks Spring-Boot et Hibernate ainsi que le moteur de template Thymeleaf
 et l'outil de gestion de dépendences Maven.
