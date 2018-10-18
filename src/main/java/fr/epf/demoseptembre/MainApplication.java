@@ -55,7 +55,7 @@ public class MainApplication {
         storyDao.deleteAll();
         storyDao.save(new Story(null,
                 "Les Quatres Cavaliers",
-                "Une petite histoire pour vous présenter le fonctionnement du site. Affrontez les 4 Cavaliers de l’Apoplexie (Ah ! vus ne vous attendiez pas à ce nom n’est-ce pas ?) et survivez à leurs pièges pour… et bien, juste arriver à survivre !",
+                "Une petite histoire pour vous présenter le fonctionnement du site. Affrontez les 4 Cavaliers de l’Apoplexie (Ah ! vous ne vous attendiez pas à ce nom n’est-ce pas ?) et survivez à leurs pièges pour… et bien, juste arriver à survivre !",
                 userDao.findByLogin("admin").get(0),
                 "img/knight.jpg"));
 
@@ -65,27 +65,48 @@ public class MainApplication {
                 "L’Empereur (Trajan)",
                 storyDao.findById(5).get(),
                 "1",
-                "« Bienvenu dans le défi des Quatres Cavaliers de l’Apoplexie ! Ces derniers ont été atteint par le même mal que le tiens ! Réussis-le, et tu pourras survivre ! Echoue, et tu rejoindras le royaume des morts ! »" +
-                        "C’est par cette phrase que vous êtes accueilli. La dernière chose dont vous vous souveniez, c’est que vous étiez en train de discuter avec des amis, quand d’un coup, un malaise vous a prit et vous avez perdu connaissance… Serait-ce ça, l’Apoplexie ? Dur d’y répondre. Mais sans plus attendre, vous entendez le bruit du galop au loin, dans cette grande étendue d’un blanc immaculé. \n" +
-                        "Soudain, un cavalier sorti de la brume. Ce dernier monte sur un étalon blanc magnifique, qui semble sortir d’un autre temps. Son cavalier n’en est pas moins impressionnant. Son physique n’est pourtant pas remarquable : un homme ayant atteint un âge déjà assez avancé, les cheveux gris et les traits tirés par la fatigue et le travail. Toutefois, il irradiait de cet homme une aura brillante, qui écrase n’importe qui sur lequel il pose son regard. Sa tenue était celle d’un guerrier : une cuirasse métallique lui couvrait le torse, derrière laquelle on pouvait voir une tunique brodée. Cet accoutrement était fini par des sandales fines. Il portait à sa main un pavois en bois et une lance étincelante.\n" +
+                "« Bienvenu dans le défi des Quatres Cavaliers de l’Apoplexie !\n\n" +
+                        "Ces derniers ont été atteint par le même mal que le tiens ! Réussis-le, et tu pourras survivre ! Echoues, et tu rejoindras le royaume des morts ! »\n\n" +
+                        "C’est par cette phrase que vous êtes accueilli. La dernière chose dont vous vous souveniez, c’est que vous étiez en train de discuter avec des amis,\n" +
+                        "quand d’un coup, un malaise vous a prit et vous avez perdu connaissance…\n\n" +
+                        "Serait-ce ça, l’Apoplexie ? Dur d’y répondre. Mais sans plus attendre, vous entendez le bruit du galop au loin, dans cette grande étendue d’un blanc immaculé. \n" +
+                        "Soudain, un cavalier sorti de la brume. Ce dernier monte sur un étalon blanc magnifique, qui semble sortir d’un autre temps. Son cavalier n’en est pas moins impressionnant.\n" +
+                        "Son physique n’est pourtant pas remarquable : un homme ayant atteint un âge déjà assez avancé, les cheveux gris et les traits tirés par la fatigue et le travail.\n\n" +
+                        "Toutefois, il irradiait de cet homme une aura brillante, qui écrase n’importe qui sur lequel il pose son regard.\n" +
+                        "Sa tenue était celle d’un guerrier : une cuirasse métallique lui couvrait le torse, derrière laquelle on pouvait voir une tunique brodée.\n" +
+                        "Cet accoutrement était fini par des sandales fines. Il portait à sa main un pavois en bois et une lance étincelante.\n\n" +
                         "Il pointa alors sa lance vers vous, et dit d’une voie profonde :\n" +
-                        "« Je vois que vous êtes tombés dans le Défi de l’Apoplexie. Mon nom est Augustus Trajan ! Vous connaissez les règles ! vous devez me vaincre, ainsi que les trois autres cavaliers, pour survivre ! Mon défi est simple. Voyez, derrière moi ; vous trouverez tout un arsenal d’arme. Prenez celle qui vous semble la plus adéquat ; vous m’affronterez alors en duel. Je vous attendrai ici. Vous avez tout le temps pour choisir votre arme ; mais sachez que dès que vous en aurez pris une, le duel commencera. »\n" +
-                        "En découvrant l’arsenal, vous repérez tout un tas d’armes blanches, datant de l’antiquité : des arcs, des épées, lances, haches… de toutes les tailles et d’usure différente. Même si vous n’en connaissez pas tant que ça, vous repérez assez rapidement deux armes qui semblent plus appropriés pour le combat qui vous attend : une épée courte de bonne facture accompagnée d’un bouclier en bois rond cerné d’un arceau en métal pour bien le maintenir, et une longue lance à la pointe plate légère.\n"));
+                        "« Je vois que vous êtes tombés dans le Défi de l’Apoplexie. Mon nom est Augustus Trajan ! Vous connaissez les règles !\n" +
+                        "Vous devez me vaincre, ainsi que les trois autres cavaliers, pour survivre !\n" +
+                        "Mon défi est simple. Voyez, derrière moi ; vous trouverez tout un arsenal d’arme. Prenez celle qui vous semble la plus adéquat ; vous m’affronterez alors en duel.\n" +
+                        "Je vous attendrai ici. Vous avez tout le temps pour choisir votre arme ; mais sachez que dès que vous en aurez pris une, le duel commencera. »\n" +
+                        "En découvrant l’arsenal, vous repérez tout un tas d’armes blanches, datant de l’antiquité : des arcs, des épées, lances, haches… de toutes les tailles et d’usure différente.\n" +
+                        "Même si vous n’en connaissez pas tant que ça, vous repérez assez rapidement deux armes qui semblent plus appropriés pour le combat qui vous attend :\n" +
+                        "une épée courte de bonne facture accompagnée d’un bouclier en bois rond cerné d’un arceau en métal pour bien le maintenir, et une longue lance à la pointe plate légère.\n"));
 
         pageDao.save(new Page(null,
                 "L’épée et le bouclier",
                 storyDao.findById(5).get(),
                 "1.1",
-                "A peine après avoir récupéré l’épée et le bouclier, vous entendez une lance fendre l’air. Instinctivement, vous positionnez votre bouclier au-devant du bruit qui approche. Malheureusement, le coup est destructeur ! Votre bouclier vole en morceau, et la lance se plante dans votre bras, vous infligeant une forte douleur et vous mettant à terre. « Plus aucune chance » Vous dites-vous, avant de voir Trajan sortir de la brume, un petit sourire au visage. La dernière chose que vous entendez avant de tomber inconscient est la voie de Trajan, au loin « Vous avez choisi… Bien mal »."));
+                "A peine après avoir récupéré l’épée et le bouclier, vous entendez une lance fendre l’air. Instinctivement, vous positionnez votre bouclier au-devant du bruit qui approche.\n" +
+                        "Malheureusement, le coup est destructeur ! Votre bouclier vole en morceau, et la lance se plante dans votre bras, vous infligeant une forte douleur et vous mettant à terre.\n" +
+                        "« Plus aucune chance » Vous dites-vous, avant de voir Trajan sortir de la brume, un petit sourire au visage.\n" +
+                        "La dernière chose que vous entendez avant de tomber inconscient est la voie de Trajan, au loin « Vous avez choisi… Bien mal »."));
 
         pageDao.save(new Page(null,
                 "Lance Longue",
                 storyDao.findById(5).get(),
                 "1.2",
-                "Juste après avoir pris la lance, et avoir mesuré son poids, un hennissement se fit attendre de derrière vous. A peine après vous entendez une lance fendre l’air, et vous ne pouvez que rouler sur le côté pour éviter la lance qui s’en va exploser le bouclier en un seul coup destructeur. « Aucune chance que je pare cette attaque avec le bouclier, il est fort ! Maintenant, il me suffit d’avoir assez d’allonge et de porter un coup pour le désarçonner et prendre l’avantage. »\n" +
-                        "Après ce coup, Trajan apparut de l’ombre et récupéra son arme. « Ah ! vous êtes encore en vie. Intéressant. »\n" +
-                        "Avant d’attaquer à nouveau, et à nouveau la seule option état d’esquiver sur le côté. Cette fois-ci, toutefois, vous avez tout le temps de voir son processus d’attaque. Certes, le coup est fort et rapide à lancer, mais le temps entre chaque coup est élevé. « C’est ma chance. » Vous dites-vous.\n" +
-                        "Un nouveau coup reparti, tel un canon. Vous esquivez à nouveau, mais cette fois-ci seulement en vous baissant, et envoyez votre lance aussi fort et loin que vous pouvez, en direction de Trajan. Vous sentez quelque chose de mou au bout de votre lance, et Trajan pousser un cri de douleur avant de lâcher sa lance et de le voir tomber de son cheval.\n" +
+                "Juste après avoir pris la lance, et avoir mesuré son poids, un hennissement se fit attendre de derrière vous.\n" +
+                        "A peine après vous entendez une lance fendre l’air, et vous ne pouvez que rouler sur le côté pour éviter la lance qui s’en va exploser le bouclier en un seul coup destructeur.\n" +
+                        "       « Aucune chance que je pare cette attaque avec le bouclier, il est fort ! Maintenant, il me suffit d’avoir assez d’allonge et de porter un coup pour le désarçonner et prendre l’avantage. »\n" +
+                        "Après ce coup, Trajan apparut de l’ombre et récupéra son arme. « Ah ! vous êtes encore en vie. Intéressant. »\n\n" +
+                        "Avant d’attaquer à nouveau, et à nouveau la seule option état d’esquiver sur le côté.\n" +
+                        "Cette fois-ci, toutefois, vous avez tout le temps de voir son processus d’attaque.\n" +
+                        " Certes, le coup est fort et rapide à lancer, mais le temps entre chaque coup est élevé.\n" +
+                        "« C’est ma chance. » Vous dites-vous.\n" +
+                        "Un nouveau coup reparti, tel un canon. Vous esquivez à nouveau, mais cette fois-ci seulement en vous baissant, et envoyez votre lance aussi fort et loin que vous pouvez, en direction de Trajan.\n" +
+                        "Vous sentez quelque chose de mou au bout de votre lance, et Trajan pousser un cri de douleur avant de lâcher sa lance et de le voir tomber de son cheval.\n" +
                         "« Félicitation. Vous m’avez vaincu. Bonne chance pour le prochain combat… »\n" +
                         "Toutes les armes disparurent alors, ainsi que Trajan et le cheval. Le deuxième combat pouvait commencer.\n"));
 
@@ -93,10 +114,17 @@ public class MainApplication {
                 "Le Magicien (Bach)",
                 storyDao.findById(5).get(),
                 "1.2.1",
-                "Peu après avoir défait Trajan, vous entendez une douce mélodie envoutante envahir votre environnement. La brume se retira légèrement pour laisser apparaitre deux magnifiques pianos à queue. L’un deux est vide, mais la musique que vous entendez depuis peu maintenant provient du deuxième piano, qu’un homme d’âge mur est en train de jouer. Il semble expert dans ce domaine et possède une grande maitrise de son instrument. La musique est enivrante et semble tourner et tourner encore et encore, sans jamais s’arrêter. Vous écoutez ce morceau avec beaucoup d’attention. \n" +
+                "Peu après avoir défait Trajan, vous entendez une douce mélodie envoutante envahir votre environnement. La brume se retira légèrement pour laisser apparaitre deux magnifiques pianos à queue.\n" +
+                        "L’un deux est vide, mais la musique que vous entendez depuis peu maintenant provient du deuxième piano, qu’un homme d’âge mur est en train de jouer.\n" +
+                        "Il semble expert dans ce domaine et possède une grande maitrise de son instrument. La musique est enivrante et semble tourner et tourner encore et encore,\n" +
+                        "sans jamais s’arrêter. Vous écoutez ce morceau avec beaucoup d’attention. \n" +
                         "Mais d’un coup, la musique s’arrête. Au milieu d’une phrase. Sans être fini, et vous sors de votre torpeur. L’homme se tourne alors vers vous, et vous dit :\n" +
-                        "« Eh bien ! Je suis Jean-Sébastien Bach, et le deuxième cavalier que vous aurez à affronter. Mon défi est simple ; ce morceau que vous avez entendu est en réalité un duo. Vous serez la deuxième voix. Si vous arrivez à suivre et que la performance est suffisante, vous pourrez continuer. La partition est déjà sur le piano ; je n’attends de vous uniquement que vous me fournissiez une contrepartie plaisante à l’oreille. Vous gagnerez si vous y arrivez. Allez-y, asseyez-vous, et commençons. »\n" +
-                        "Heureusement pour vous, vous connaissez un petit peu de piano. La partition ne semble pas très dure au premier abord. Mais arriver à bien la jouer tout en la découvrant ? Cela risque d’être compliqué. A nouveau, deux choix s’offrent à vous. Soit essayer d’être le plus fidèle à la partition, au risque de faire plus d’erreur, ou d’arriver à improviser quelques parties, quand la lecture de la partition devient difficile.\n"));
+                        "« Eh bien ! Je suis Jean-Sébastien Bach, et le deuxième cavalier que vous aurez à affronter. Mon défi est simple ; ce morceau que vous avez entendu est en réalité un duo.\n" +
+                        "Vous serez la deuxième voix. Si vous arrivez à suivre et que la performance est suffisante, vous pourrez continuer. La partition est déjà sur le piano ;\n" +
+                        "je n’attends de vous uniquement que vous me fournissiez une contrepartie plaisante à l’oreille. Vous gagnerez si vous y arrivez. Allez-y, asseyez-vous, et commençons. »\n" +
+                        "Heureusement pour vous, vous connaissez un petit peu de piano. La partition ne semble pas très dure au premier abord. Mais arriver à bien la jouer tout en la découvrant ?\n" +
+                        "Cela risque d’être compliqué. A nouveau, deux choix s’offrent à vous. Soit essayer d’être le plus fidèle à la partition, au risque de faire plus d’erreur,\n" +
+                        "ou d’arriver à improviser quelques parties, quand la lecture de la partition devient difficile.\n"));
 
         pageDao.save(new Page(null,
                 "L’improvisation",

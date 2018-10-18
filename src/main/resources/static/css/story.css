@@ -33,9 +33,9 @@ body {
 }
 
 #myPArea {
-    margin: 0 auto;
-    font-size: 20px;
-    margin-top: 40px;
-    width: 900px;
+    margin: 40px auto;
+    font-size: 14px;
+    width: 100%;
+    text-align: justify;
     color: white;
 }
