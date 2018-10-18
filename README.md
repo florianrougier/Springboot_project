@@ -27,11 +27,11 @@ Ce projet utilise les frameworks Spring-Boot et Hibernate ainsi que le moteur de
 
 Processus d'installation:
 
-Télécharger le projet depuis github sur votre machine.
-Importer le projet dans IntelliJ IDEA.
-Dans XAMPP ou WANPP, démarrer le serveur Web ainsi que le module de gestion de BDD.
-Créer une base de données SQL.
-Dans application.properties, indiquer le nom de la base de données ainsi que l'identifiant et le mot de passe de la BDD créée.
-Exécuter le projet.
-Ouvrir un navigateur internet et tapper l'URL suivante : http://localhost:8080/accueil
+1. Télécharger le projet depuis github sur votre machine.
+2. Importer le projet dans IntelliJ IDEA.
+3. Dans XAMPP ou WANPP, démarrer le serveur Web ainsi que le module de gestion de BDD.
+4. Créer une base de données SQL.
+5. Dans application.properties, indiquer l'identifiant et le mot de passe de la BDD créée. Remplacer dans l'url de la BDD "madbamoi" par    le nom de la BDD créée.
+6. Exécuter le projet.
+Ouvrir un navigateur internet et tapper l'URL suivante : http://localhost:8080/home
 
