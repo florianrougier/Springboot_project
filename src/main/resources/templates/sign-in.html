@@ -36,7 +36,7 @@
         <div class="login100-more"></div>
 
         <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-            <form class="login100-form validate-form" th:action="@{/connexion}" th:object="${user}" method="post">
+            <form class="login100-form validate-form" th:action="@{/sign-in}" th:object="${user}" method="post">
 					<span class="login100-form-title p-b-59">
 						Connectez vous
 					</span>
@@ -59,7 +59,7 @@
                         <button class="login100-form-btn" >Se connecter</button>
                     </div>
                 </div>
-                <p id="back-home"><a th:href="@{accueil}">Retourner à l'accueil</a></p>
+                <p id="back-home"><a th:href="@{home}">Retourner à l'accueil</a></p>
             </form>
         </div>
     </div>

@@ -41,62 +41,62 @@ public class MappingController {
     }
 
     //Mapping of the home page
-    @GetMapping("/accueil")
+    @GetMapping("/home")
     public String getAccueil(Model model) {
 
         System.out.println(this.user);
 
         model.addAttribute("story", storyDao.findAll());
         model.addAttribute("user", this.user);
-        return "accueil";
+        return "home";
     }
 
     //GET and POST Mapping of the sign up page
-    @GetMapping("/inscription")
+    @GetMapping("/sign-up")
     public String getInscription(Model model) {
 
         model.addAttribute("info","");
         model.addAttribute("formInscription", new FormInscription());
-        return "inscription";
+        return "sign-up";
     }
-    @PostMapping("/inscription")
+    @PostMapping("/sign-up")
     public String postInscription(Model model, FormInscription formInscription) {
 
         if (!userDao.findByLogin(formInscription.getUser().getLogin()).isEmpty()){
             model.addAttribute("info","Nom de compte déja pris");
             model.addAttribute("formInscription",formInscription);
-            return "inscription";
+            return "sign-up";
         }
         if (!formInscription.getUser().getPassword().equals(formInscription.getPassword2())){
             model.addAttribute("info","Mots de passe différents");
             model.addAttribute("formInscription", formInscription);
-            return "inscription";
+            return "sign-up";
         }
 
         userDao.save(formInscription.getUser());
         this.user = formInscription.getUser();
-        return "redirect:accueil";
+        return "redirect:home";
     }
 
     //GET and POST Mapping of the sign in page
-    @GetMapping("/connexion")
+    @GetMapping("/sign-in")
     public String getConnexion(Model model) {
 
         model.addAttribute("info","");
         model.addAttribute("user",new User());
-        return "connexion";
+        return "sign-in";
     }
-    @PostMapping("/connexion")
+    @PostMapping("/sign-in")
     public String postConnexion(Model model, User user) {
 
         if (userDao.findByLoginAndPassword(user.getLogin(),user.getPassword()).isEmpty()){
             model.addAttribute("info","Nom de compte ou mot de passe incorrect");
             model.addAttribute("user",user);
-            return "connexion";
+            return "sign-in";
         }
 
         this.user = userDao.findByLogin(user.getLogin()).get(0);
-        return "redirect:accueil";
+        return "redirect:home";
     }
 
     //GET Mapping of the sign out
@@ -104,7 +104,7 @@ public class MappingController {
     public String getDeconnexion(Model model) {
 
         this.user = new User();
-        return "redirect:accueil";
+        return "redirect:home";
     }
 
 
@@ -133,7 +133,7 @@ public class MappingController {
         formObject.getPage().setKnot("1");
         pageDao.save(formObject.getPage());
 
-        return "redirect:accueil";
+        return "redirect:home";
     }
 
 
@@ -212,6 +212,7 @@ public class MappingController {
 
         Page page = pageDao.findByStoryAndKnot(storyDao.findByName(storyName).get(0), pageKnot).get(0);
         page.setText(pageEdit.getText());
+        page.setTitle(pageEdit.getTitle());
         pageDao.save(page);
 
         return "redirect:dashboard";
@@ -274,5 +275,12 @@ public class MappingController {
         return "redirect:edit-story?name=" + storyName;
     }
 
+
+    //GET Mapping of the error page
+    @GetMapping("/error")
+    public String getError(Model model){
+
+        return "redirect:accueil";
+    }
 
 }
