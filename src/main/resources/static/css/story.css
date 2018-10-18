@@ -34,8 +34,10 @@ body {
 
 #myPArea {
     margin: 40px auto;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 14px;
     width: 100%;
+    white-space: pre-wrap;
     text-align: justify;
     color: white;
 }
