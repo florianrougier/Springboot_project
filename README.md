@@ -1,8 +1,15 @@
-# Training EPF Spring Boot
+# Projet EPF Spring-Boot ROUGIER ROUSSIN DANTY
 =====
 
-1. Cloner le projet en utilisant la commande `git clone https://github.com/resourcepool/formation-spring-boot`
+Description: L'application web a pour but la création, l'hébergement et la lecture d'histoires interactives dont vous etes le héros.
+              Ce projet utilise les frameworks Spring-Boot et Hibernate ainsi que le moteur de template Thymeleaf
+              et l'outil de gestion de dépendences Maven.
 
-2. Importer le projet dans IntelliJ IDEA en important le fichier "pom.xml" à la racine de ce repository.
+Installation: 1. Télécharger le projet depuis guthub sur votre machine.
+              2. Importer le projet dans IntelliJ IDEA.
+              3. Dans XAMPP ou WANPP, démarrer le serveur Web ainsi que le module de gestion de BDD.
+              4. Créer une base de données MySQL avec le nom madbamoi.
+              4. Dans application.properties, ajouter le username et le password de la BDD créée.
+              5. Run le projet.
+              6. Ouvrir un navigateur internet et tapper l'URL suivante : http://localhost:8080/accueil
 
-3. Exécuter votre DB mysql. Si vous avez docker, vous pouvez utiliser la commande suivante: `docker run -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=madbamoi -p "3306:3306" -d mysql`
