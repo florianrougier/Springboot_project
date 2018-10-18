@@ -1,5 +1,15 @@
 package fr.epf.demoseptembre.models;
 
+/**
+ * TODO class details.
+ *
+ * This model is used during the sign up. It is composed of a user, to collect the new login and password,
+ * and a second password to check if they are the same
+ *
+ * @author ROUSSIN ROUGIER DANTY
+ *
+ */
+
 public class FormInscription {
 
     private User user;

@@ -7,10 +7,12 @@ import javax.persistence.Id
 import javax.persistence.ManyToOne
 
 /**
- * Cette classe utilise Kotlin (parce qu'on est grave des Hipsters).
- * La "data class" représente un "POJO" (plain-old java object), c'est à dire un objet qui n'est destiné qu'à "représenter" une entité.
- * Ici, en l'occurence, un utilisateur.
- * @author Loïc Ortola on 10/09/2018
+ * TODO class details.
+ *
+ * Page Model. It has a title , a 'knot' which represents its place in the story, a text and a story's id which is the page's story
+ *
+ * @author ROUSSIN ROUGIER DANTY
+ *
  */
 @Entity
 data class Page(@Id @GeneratedValue var page_id: Int? = null, var title: String? = null, @ManyToOne var story: Story? = null,

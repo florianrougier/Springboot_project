@@ -9,7 +9,10 @@ import java.util.List;
 /**
  * TODO class details.
  *
- * @author Loïc Ortola on 10/09/2018
+ * Repository of the User table in the DB
+ *
+ * @author ROUSSIN ROUGIER DANTY
+ *
  */
 @Repository
 public interface UserDao extends CrudRepository<User, Integer> {
