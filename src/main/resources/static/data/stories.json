@@ -1,0 +1,75 @@
+{
+  "user": {
+    "id": null,
+    "login": "admin",
+    "password": "admin"
+  },
+  "stories": [
+    {
+      "id": null,
+      "name": "Les Quatres Cavaliers",
+      "summary": "Une petite histoire pour vous présenter le fonctionnement du site. Affrontez les 4 Cavaliers de l’Apoplexie (Ah ! vus ne vous attendiez pas à ce nom n’est-ce pas ?) et survivez à leurs pièges pour… et bien, juste arriver à survivre !",
+      "user": "admin",
+      "image": "img/dragon.jpg",
+      "page": [
+        {
+          "id": null,
+          "title": "L’Empereur (Trajan)",
+          "knot": "1",
+          "content": "« Bienvenu dans le défi des Quatres Cavaliers de l’Apoplexie ! Ces derniers ont été atteint par le même mal que le tiens ! Réussis-le, et tu pourras survivre ! Echoue, et tu rejoindras le royaume des morts ! ». C’est par cette phrase que vous êtes accueilli. La dernière chose dont vous vous souveniez, c’est que vous étiez en train de discuter avec des amis, quand d’un coup, un malaise vous a prit et vous avez perdu connaissance… Serait-ce ça, l’Apoplexie ? Dur d’y répondre. Mais sans plus attendre, vous entendez le bruit du galop au loin, dans cette grande étendue d’un blanc immaculé. Soudain, un cavalier sorti de la brume. Ce dernier monte sur un étalon blanc magnifique, qui semble sortir d’un autre temps. Son cavalier n’en est pas moins impressionnant. Son physique n’est pourtant pas remarquable : un homme ayant atteint un âge déjà assez avancé, les cheveux gris et les traits tirés par la fatigue et le travail. Toutefois, il irradiait de cet homme une aura brillante, qui écrase n’importe qui sur lequel il pose son regard. Sa tenue était celle d’un guerrier : une cuirasse métallique lui couvrait le torse, derrière laquelle on pouvait voir une tunique brodée. Cet accoutrement était fini par des sandales fines. Il portait à sa main un pavois en bois et une lance étincelante. Il pointa alors sa lance vers vous, et dit d’une voie profonde : « Je vois que vous êtes tombés dans le Défi de l’Apoplexie. Mon nom est Augustus Trajan ! Vous connaissez les règles ! vous devez me vaincre, ainsi que les trois autres cavaliers, pour survivre ! Mon défi est simple. Voyez, derrière moi ; vous trouverez tout un arsenal d’arme. Prenez celle qui vous semble la plus adéquat ; vous m’affronterez alors en duel. Je vous attendrai ici. Vous avez tout le temps pour choisir votre arme ; mais sachez que dès que vous en aurez pris une, le duel commencera. » En découvrant l’arsenal, vous repérez tout un tas d’armes blanches, datant de l’antiquité : des arcs, des épées, lances, haches… de toutes les tailles et d’usure différente. Même si vous n’en connaissez pas tant que ça, vous repérez assez rapidement deux armes qui semblent plus appropriés pour le combat qui vous attend : une épée courte de bonne facture accompagnée d’un bouclier en bois rond cerné d’un arceau en métal pour bien le maintenir, et une longue lance à la pointe plate légère."
+        },
+        {
+          "id": null,
+          "title": "Lance longue",
+          "knot": "1.1",
+          "content": "Juste après avoir pris la lance, et avoir mesuré son poids, un hennissement se fit attendre de derrière vous. A peine après vous entendez une lance fendre l’air, et vous ne pouvez que rouler sur le côté pour éviter la lance qui s’en va exploser le bouclier en un seul coup destructeur. « Aucune chance que je pare cette attaque avec le bouclier, il est fort ! Maintenant, il me suffit d’avoir assez d’allonge et de porter un coup pour le désarçonner et prendre l’avantage. » Après ce coup, Trajan apparut de l’ombre et récupéra son arme. « Ah ! vous êtes encore en vie. Intéressant. » Avant d’attaquer à nouveau, et à nouveau la seule option état d’esquiver sur le côté. Cette fois-ci, toutefois, vous avez tout le temps de voir son processus d’attaque. Certes, le coup est fort et rapide à lancer, mais le temps entre chaque coup est élevé. « C’est ma chance. » Vous dites-vous. Un nouveau coup reparti, tel un canon. Vous esquivez à nouveau, mais cette fois-ci seulement en vous baissant, et envoyez votre lance aussi fort et loin que vous pouvez, en direction de Trajan. Vous sentez quelque chose de mou au bout de votre lance, et Trajan pousser un cri de douleur avant de lâcher sa lance et de le voir tomber de son cheval. « Félicitation. Vous m’avez vaincu. Bonne chance pour le prochain combat… » Toutes les armes disparurent alors, ainsi que Trajan et le cheval. Le deuxième combat pouvait commencer."
+        },
+        {
+          "id": null,
+          "title": "L’épée et le bouclier",
+          "knot": "1.2",
+          "content": "A peine après avoir récupéré l’épée et le bouclier, vous entendez une lance fendre l’air. Instinctivement, vous positionnez votre bouclier au-devant du bruit qui approche. Malheureusement, le coup est destructeur ! Votre bouclier vole en morceau, et la lance se plante dans votre bras, vous infligeant une forte douleur et vous mettant à terre. « Plus aucune chance » Vous dites-vous, avant de voir Trajan sortir de la brume, un petit sourire au visage. La dernière chose que vous entendez avant de tomber inconscient est la voie de Trajan, au loin « Vous avez choisi… Bien mal »."
+        },
+        {
+          "id": null,
+          "title": "Le Magicien (Bach)",
+          "knot": "1.2.1",
+          "content": "Peu après avoir défait Trajan, vous entendez une douce mélodie envoutante envahir votre environnement. La brume se retira légèrement pour laisser apparaitre deux magnifiques pianos à queue. L’un deux est vide, mais la musique que vous entendez depuis peu maintenant provient du deuxième piano, qu’un homme d’âge mur est en train de jouer. Il semble expert dans ce domaine et possède une grande maitrise de son instrument. La musique est enivrante et semble tourner et tourner encore et encore, sans jamais s’arrêter. Vous écoutez ce morceau avec beaucoup d’attention. Mais d’un coup, la musique s’arrête. Au milieu d’une phrase. Sans être fini, et vous sors de votre torpeur. L’homme se tourne alors vers vous, et vous dit : « Eh bien ! Je suis Jean-Sébastien Bach, et le deuxième cavalier que vous aurez à affronter. Mon défi est simple ; ce morceau que vous avez entendu est en réalité un duo. Vous serez la deuxième voix. Si vous arrivez à suivre et que la performance est suffisante, vous pourrez continuer. La partition est déjà sur le piano ; je n’attends de vous uniquement que vous me fournissiez une contrepartie plaisante à l’oreille. Vous gagnerez si vous y arrivez. Allez-y, asseyez-vous, et commençons. » Heureusement pour vous, vous connaissez un petit peu de piano. La partition ne semble pas très dure au premier abord. Mais arriver à bien la jouer tout en la découvrant ? Cela risque d’être compliqué. A nouveau, deux choix s’offrent à vous. Soit essayer d’être le plus fidèle à la partition, au risque de faire plus d’erreur, ou d’arriver à improviser quelques parties, quand la lecture de la partition devient difficile."
+        },
+        {
+          "id": null,
+          "title": "Le Magicien (Bach)",
+          "knot": "1.2.2",
+          "content": "Peu après avoir défait Trajan, vous entendez une douce mélodie envoutante envahir votre environnement. La brume se retira légèrement pour laisser apparaitre deux magnifiques pianos à queue. L’un deux est vide, mais la musique que vous entendez depuis peu maintenant provient du deuxième piano, qu’un homme d’âge mur est en train de jouer. Il semble expert dans ce domaine et possède une grande maitrise de son instrument. La musique est enivrante et semble tourner et tourner encore et encore, sans jamais s’arrêter. Vous écoutez ce morceau avec beaucoup d’attention. Mais d’un coup, la musique s’arrête. Au milieu d’une phrase. Sans être fini, et vous sors de votre torpeur. L’homme se tourne alors vers vous, et vous dit : « Eh bien ! Je suis Jean-Sébastien Bach, et le deuxième cavalier que vous aurez à affronter. Mon défi est simple ; ce morceau que vous avez entendu est en réalité un duo. Vous serez la deuxième voix. Si vous arrivez à suivre et que la performance est suffisante, vous pourrez continuer. La partition est déjà sur le piano ; je n’attends de vous uniquement que vous me fournissiez une contrepartie plaisante à l’oreille. Vous gagnerez si vous y arrivez. Allez-y, asseyez-vous, et commençons. » Heureusement pour vous, vous connaissez un petit peu de piano. La partition ne semble pas très dure au premier abord. Mais arriver à bien la jouer tout en la découvrant ? Cela risque d’être compliqué. A nouveau, deux choix s’offrent à vous. Soit essayer d’être le plus fidèle à la partition, au risque de faire plus d’erreur, ou d’arriver à improviser quelques parties, quand la lecture de la partition devient difficile."
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "Le Château du Précipice",
+      "summary": "Lloyd Irving, le nain aventurier, appris lors de ces voyages qu’un fabuleux trésor se cachait au Château du Précipice. Toutefois, personne jusque là qui était rentré n’avait put en ressortir sain d’esprit… Saurez-vous affronter les dangers du château et en ressortir sain et sauf, tout en découvrant et en récupérant le trésor ?",
+      "user": "admin",
+      "image": "img/castlevani.jpg",
+      "page": [
+        {
+          "id": null,
+          "title": "La grande porte",
+          "knot": "1",
+          "content": "« Enfin ! Le Château du Précipice. J’y suis enfin ! » Se dit Lloyd, en arrivant au Crépuscule devant le Donjon. Une masse noire dominant les environs. Comme on aurait put s’en douter, son nom vient de sa location : Ce dernier a été construit au bord de la mer, sur une falaise, de sorte que seul l’entrée principale est accessible. Il faudrait être fou pour vouloir tenter d’escalader la falaise pour tenter de passer par derrière via une fenêtre ou autre. De sorte, seul l’accès à la vallée est considérablement fortifié. Des barbelés et de nombreuses roches aiguisées bloque l’escalade de ce côté. Sans compter les potentiels gardes qui peuvent attendre les aventuriers téméraires… Lloyd Irving, un nain brun aux yeux bleus, fort beau (enfin, c’est ce qu’on dit de lui chez lui) et vétu d’une armure clouté rouge, ne s’en faisait pas plus que ça. Il était conscient de ses très grandes qualités en combat. Après tout, cela faisait maintenant une dizaine d’années qu’il baroudait en quête de richesses et d’aventures ! A l’aide de ses doubles épées et de son style de combat à 2 mains bien particulier, peu de personnes arrivait à lui tenir tête. « Bon, voyons voir… La seule option est d’entrer par la grande porte. La question maintenant est de savoir si j’y vais maintenant ou j’attends le milieu de la nuit… »"
+        },
+        {
+          "id": null,
+          "title": "Entrer maintenant",
+          "knot": "1.1",
+          "content": "En entrant dans le château, Lloyd découvre dans la pénombre de la nuit un immense hall d’entrée sans lumières. Heureusement pour lui, Lloyd, anciennement nain des cavernes n’avait pas de problème de vision. Il découvrit un groupe de 20 gobelins gardant l’entrée ! Ces derniers, occupés à jouer au dés et diverses autres jeux, tournèrent la tête en voyant la porte s’ouvrir. Lloyd, lucide, se cacha derrière une des nombreuses colonnes qui faisait le tour du Hall d’entrée. Les gobelins, pas très futés et ne voyant personne, décidèrent juste de fermer la porte avant de retourner à leur jeu. « J’ai encore eu de la chance, se dit Lloyd. Certes les gobelins sont de piètres ennemis, mais un bataillon complet, c’est bien trop pour un seul nain. » Lloyd prit alors le temps de bien prendre connaissance des lieux. La salle était très grande mais ne contenait réellement pas grand-chose. Certainement ne permettait juste qu’à épater la galerie à l’époque où ce château tenait des réceptions. Il y avait trois sortie de visible : une grand-porte au fond, malheureusement bloqué par les gobelins, et une à gauche et à droite…"
+        },
+        {
+          "id": null,
+          "title": "Attendre la nuit noire",
+          "knot": "1.2",
+          "content": "En entrant dans le château, Lloyd découvre dans la pénombre de la nuit un immense hall d’entrée sans lumières. Heureusement pour lui, Lloyd, anciennement nain des cavernes n’avait pas de problème de vision. La salle était très grande mais ne contenait réellement pas grand-chose. Certainement ne permettait juste qu’à épater la galerie à l’époque où ce château tenait des réceptions. Il y avait trois sorties de visible : une grand-porte au fond, une à gauche et à droite…"
+        }
+      ]
+    }
+  ]
+}

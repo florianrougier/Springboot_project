@@ -24,3 +24,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### Database credentials ###
+/pom.xml
+/src/main/resources/application.properties
