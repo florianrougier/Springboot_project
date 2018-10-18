@@ -26,25 +26,18 @@ public class MainApplication {
 
 
     public static void main(String[] args) {
-        // Point d'entrée de l'application.
-        // On dit à Spring de s'initialiser
-        // Il va aller "regarder" nos classes et détecter les annotations des singletons
-        // (@Controller, @Repository, @Component, @Service, etc...)
-        // Ensuite, il va construire l'arbre de dépendances et le résoudre en injectant les données dans les bonnes classes
+
         SpringApplication.run(MainApplication.class);
     }
 
     /**
-     * On appelle cette méthode lorsque Spring a terminé son initialisation.
-     * Ici, on va réinitialiser la DB et insérer 3 entrées.
+     * We are calling this methode when Spring initialization is done.
+     * Here, we are adding 4 new users and 1 story writen by admin
      */
     @PostConstruct
     public void init() {
 
-
-        // We remove all entries from the database to avoid duplicate content when running the application multiple times
-        // We create 1 user
-        userDao.deleteAll();
+        //userDao.deleteAll();
         userDao.save(new User(null, "admin", "admin"));
         userDao.save(new User(null, "florian", "florian"));
         userDao.save(new User(null, "thibault", "thibault"));

@@ -5,10 +5,13 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 /**
- * Cette classe utilise Kotlin (parce qu'on est grave des Hipsters).
- * La "data class" représente un "POJO" (plain-old java object), c'est à dire un objet qui n'est destiné qu'à "représenter" une entité.
- * Ici, en l'occurence, un utilisateur.
- * @author Loïc Ortola on 10/09/2018
+ * TODO class details.
+ *
+ *
+ * User model. It has a login and a password which are used for the connection
+ *
+ * @author ROUSSIN ROUGIER DANTY
+ *
  */
 @Entity
 data class User(@Id @GeneratedValue var user_id: Int? = null, var login: String? = null, var password: String? = null)

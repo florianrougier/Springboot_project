@@ -18,7 +18,10 @@ import java.util.TreeSet;
 /**
  * TODO class details.
  *
- * @author Loïc Ortola on 10/09/2018
+ * Controller used to map URL to java code
+ *
+ * @author ROUSSIN ROUGIER DANTY
+ *
  */
 @Controller
 public class MappingController {
@@ -37,18 +40,7 @@ public class MappingController {
         user = new User();
     }
 
-    /**
-     * Ceci sera mappé sur l'URL '/users'.
-     * C'est le routeur de Spring MVC qui va détecter et appeler directement cette méthode.
-     * Il lui fournira un "modèle", auquel on pourra rajouter des attributs.
-     * Ce modèle sera ensuite forwardé à une page web (dans resources/templates).
-     * Le nom de la template est retourné par la fonction. Ici, elle appelle donc le template "users".
-     *
-     * @param model le modèle
-     * @return
-     */
-
-
+    //Mapping of the home page
     @GetMapping("/accueil")
     public String getAccueil(Model model) {
 
@@ -59,7 +51,7 @@ public class MappingController {
         return "accueil";
     }
 
-    //GET and POST Inscription
+    //GET and POST Mapping of the sign up page
     @GetMapping("/inscription")
     public String getInscription(Model model) {
 
@@ -86,7 +78,7 @@ public class MappingController {
         return "redirect:accueil";
     }
 
-    //GET and POST Connexion
+    //GET and POST Mapping of the sign in page
     @GetMapping("/connexion")
     public String getConnexion(Model model) {
 
@@ -107,7 +99,7 @@ public class MappingController {
         return "redirect:accueil";
     }
 
-    //GET Deconnexion
+    //GET Mapping of the sign out
     @GetMapping("/deconnexion")
     public String getDeconnexion(Model model) {
 
@@ -115,6 +107,8 @@ public class MappingController {
         return "redirect:accueil";
     }
 
+
+    //GET and POST Mapping of the creation of a new story
     @GetMapping("/new-story")
     public String getNewStory(Model model) {
 
@@ -128,7 +122,6 @@ public class MappingController {
 
         return "new-story";
     }
-
     @PostMapping("/new-story")
     public String postNewStory(FormObject formObject, Model model) {
 
@@ -143,14 +136,16 @@ public class MappingController {
         return "redirect:accueil";
     }
 
+
+    //GET Mapping of the story reading page
     @GetMapping("/story")
     public String getPage(Model model, @RequestParam("name") String storyName, @RequestParam("knot") String pageKnot) {
-
 
         Story story = storyDao.findByName(storyName).get(0);
         Page page = pageDao.findByStoryAndKnot(story, pageKnot).get(0);
         List<Page> listNextPage = new ArrayList<>();
 
+        //Adding the following pages
         for (Page p : pageDao.findByStory(story)) {
             if ((p.getKnot().startsWith(pageKnot + ".")) && (p.getKnot().length() == pageKnot.length() + 2))
                 listNextPage.add(p);
@@ -164,6 +159,8 @@ public class MappingController {
         return "story";
     }
 
+
+    //GET Mapping of the dashboard page, where all the stories of a user can be seen
     @GetMapping("/dashboard")
     public String getDashboard(Model model) {
 
@@ -172,6 +169,8 @@ public class MappingController {
         return "dashboard";
     }
 
+
+    //GET and POST Mapping od the story editing page
     @GetMapping("/edit-story")
     public String getEditStory(Model model, @RequestParam("name") String storyName) {
 
@@ -188,7 +187,6 @@ public class MappingController {
         model.addAttribute("user",this.user);
         return "edit-story";
     }
-
     @PostMapping("/edit-story")
     public String postEditStory(Story storyEdit, Model model, @RequestParam("name") String storyName) {
 
@@ -199,6 +197,8 @@ public class MappingController {
         return "redirect:dashboard";
     }
 
+
+    //GET and POST Mapping of a chapter editing page
     @GetMapping("/edit-page")
     public String getEditPage(Model model, @RequestParam("name") String storyName, @RequestParam("knot") String pageKnot) {
 
@@ -207,7 +207,6 @@ public class MappingController {
         model.addAttribute("user",this.user);
         return "edit-page";
     }
-
     @PostMapping("/edit-page")
     public String postEditPage(Page pageEdit, Model model, @RequestParam("name") String storyName, @RequestParam("knot") String pageKnot) {
 
@@ -218,6 +217,8 @@ public class MappingController {
         return "redirect:dashboard";
     }
 
+
+    //GET Mapping of the deleting story page
     @GetMapping("/delete-story")
     public String getDeleteStory(Model model, @RequestParam("name") String storyName) {
 
@@ -230,6 +231,8 @@ public class MappingController {
         return "redirect:dashboard";
     }
 
+
+    //GET Mapping of the deleting chapter page
     @GetMapping("/delete-page")
     public String getDeletePage(Model model, @RequestParam("name") String storyName, @RequestParam("knot") String pageKnot) {
 
@@ -242,6 +245,8 @@ public class MappingController {
         return "redirect:edit-story?name=" + storyName;
     }
 
+
+    //GET And POST Mapping of the chapter creating page
     @GetMapping("/new-page")
     public String getNewPage(Model model, @RequestParam("name") String storyName, @RequestParam("knot") String pageKnot) {
 
@@ -252,7 +257,6 @@ public class MappingController {
 
         return "new-page";
     }
-
     @PostMapping("/new-page")
     public String postNewPage(Page newPage, Model model, @RequestParam("name") String storyName, @RequestParam("knot") String pageKnot) {
         newPage.setKnot(null);
